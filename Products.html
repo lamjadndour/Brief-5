@@ -26,7 +26,34 @@
         <!-- Links -->
         <div class="nav_links">
           <a href="#">Sign in</a>
-          <button>Sign up</button>
+          <button onclick="document.getElementById('id01').style.display='block'"
+          style="width:auto;">Sign up</button>
+          <div id="id01" class="modal">
+            <form class="modal-content animate">
+              <div class="container">
+                <input type="text" placeholder="your name" required />
+                <input type="text" placeholder="email" required />
+                <input type="text" placeholder="Username" required />
+                <input type="password" placeholder=" Password" required />
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  required
+                />
+
+                <span class="choose">
+                  <button
+                    type="button"
+                    onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn"
+                  >
+                    Cancel
+                  </button>
+                  <button type="submit">Log-up</button>
+                </span>
+              </div>
+            </form>
+          </div>
         </div>
       </nav>
       <!-- Gallery -->
@@ -41,50 +68,131 @@
         Choose Your Side and Lives The Adventure
       </h1>
       <div class="prod__category">
-        <a href="#" id="Small"> Quad</a>
-        <a href="#" id="med"> Kayak</a>
-        <a href="#" id="large"> Surf</a>
+        <a href="#start" > Quad</a>
+        <a href="#midle"> Kayak</a>
+        <a href="#last" > Surf</a>
       </div>
       <div class="prod__gall">
-        <div class="prod__gall__info">
+        <div class="prod__gall__info" id="start">
           <img src="img/Quad.jpg" alt="" />
           <div class="desc">
             <h2> kayak 2D</h2>
             <p>Irumpssum gunum fsejez jdizbdùns</p>
           </div>
           <div class="check-in">
-            <div class="callender">callender</div>
-            <div class="time">time</div>
+            <input type="date"  class="check-in__size">
+            <input type="time"  class="check-in__size">
           </div>
           
           <div class="button__reserver">resever</div>
         </div>
-        <div class="prod__gall__info">
+        <div class="prod__gall__info" >
           <img src="img/Quad.jpg" alt="" />
           <div class="desc">
             <h2> kayak 2D</h2>
             <p>Irumpssum gunum fsejez jdizbdùns</p>
           </div>
           <div class="check-in">
-            <div class="callender">callender</div>
-            <div class="time">time</div>
+            <input type="date"  class="check-in__size">
+            <input type="time"  class="check-in__size">
           </div>
           
-          <div class="button__reserver"> resever</div>
-        </div><div class="prod__gall__info">
-          <img src="img/Quad.jpg" alt="" />
-          <div class="desc">
-            <h2> kayak 2D</h2>
-            <p>Irumpssum gunum fsejez jdizbdùns</p>
-          </div>
-          <div class="check-in">
-            <div class="callender">callender</div>
-            <div class="time">time</div>
-          </div>
-          
-          <div class="button__reserver"></div>
+          <div class="button__reserver">resever</div>
         </div>
-      
+        <div class="prod__gall__info" >
+          <img src="img/Quad.jpg" alt="" />
+          <div class="desc">
+            <h2> kayak 2D</h2>
+            <p>Irumpssum gunum fsejez jdizbdùns</p>
+          </div>
+          <div class="check-in">
+            <input type="date"  class="check-in__size">
+            <input type="time"  class="check-in__size">
+          </div>
+          
+          <div class="button__reserver">resever</div>
+        </div>
+
+        <div class="prod__gall__info" id="midle">
+          <img src="img/Quad.jpg" alt="" />
+          <div class="desc">
+            <h2> kayak 2D</h2>
+            <p>Irumpssum gunum fsejez jdizbdùns</p>
+          </div>
+          <div class="check-in">
+            <input type="date"  class="check-in__size">
+            <input type="time"  class="check-in__size">
+          </div>
+          
+          <div class="button__reserver">resever</div>
+        </div>
+        <div class="prod__gall__info" >
+          <img src="img/Quad.jpg" alt="" />
+          <div class="desc">
+            <h2> kayak 2D</h2>
+            <p>Irumpssum gunum fsejez jdizbdùns</p>
+          </div>
+          <div class="check-in">
+            <input type="date"  class="check-in__size">
+            <input type="time"  class="check-in__size">
+          </div>
+          
+          <div class="button__reserver">resever</div>
+        </div>
+        <div class="prod__gall__info" >
+          <img src="img/Quad.jpg" alt="" />
+          <div class="desc">
+            <h2> kayak 2D</h2>
+            <p>Irumpssum gunum fsejez jdizbdùns</p>
+          </div>
+          <div class="check-in">
+            <input type="date"  class="check-in__size">
+            <input type="time"  class="check-in__size">
+          </div>
+          
+          <div class="button__reserver">resever</div>
+        </div>
+
+        <div class="prod__gall__info" id="last">
+          <img src="img/Quad.jpg" alt="" />
+          <div class="desc">
+            <h2> kayak 2D</h2>
+            <p>Irumpssum gunum fsejez jdizbdùns</p>
+          </div>
+          <div class="check-in">
+            <input type="date"  class="check-in__size">
+            <input type="time"  class="check-in__size">
+          </div>
+          
+          <div class="button__reserver">resever</div>
+        </div>
+        <div class="prod__gall__info" >
+          <img src="img/Quad.jpg" alt="" />
+          <div class="desc">
+            <h2> kayak 2D</h2>
+            <p>Irumpssum gunum fsejez jdizbdùns</p>
+          </div>
+          <div class="check-in">
+            <input type="date"  class="check-in__size">
+            <input type="time"  class="check-in__size">
+          </div>
+          
+          <div class="button__reserver">resever</div>
+        </div>
+        <div class="prod__gall__info" >
+          <img src="img/Quad.jpg" alt="" />
+          <div class="desc">
+            <h2> kayak 2D</h2>
+            <p>Irumpssum gunum fsejez jdizbdùns</p>
+          </div>
+          <div class="check-in">
+            <input type="date"  class="check-in__size">
+            <input type="time"  class="check-in__size">
+          </div>
+          
+          <div class="button__reserver">resever</div>
+        </div>
+       
       </div>
     </section>
   </body>

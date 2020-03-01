@@ -5,9 +5,6 @@
     <meta name="Adventure" />
     <title>Live the Adventure</title>
     <link rel="stylesheet" href="app\scss\styleHome.css" />
-  </head>
-
-  <body>
     <link
       href="https://fonts.googleapis.com/css?family=Raleway:700"
       rel="stylesheet"
@@ -16,6 +13,9 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"
       rel="stylesheet"
     />
+  </head>
+
+  <body>
     <script src="app/js/script.js"></script>
     <header class="paddAllPage">
       <!-- Header -->
@@ -27,9 +27,44 @@
         <!-- Links -->
         <div class="nav_links">
           <a href="#">Sign in</a>
-          <button>Sign up</button>
+          <button
+            onclick="document.getElementById('id01').style.display='block'"
+            style="width:auto;"
+          >
+            Sign up
+          </button>
+          <div id="id01" class="modal">
+            <form class="modal-content animate">
+              <div class="container">
+                <input type="text" placeholder="your name" required />
+                <input type="text" placeholder="email" required />
+                <input type="text" placeholder="Username" required />
+                <input type="password" placeholder=" Password" required />
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  required
+                />
+
+                <span class="choose">
+                  <button
+                    type="button"
+                    onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn"
+                  >
+                    Cancel
+                  </button>
+                  <button type="submit">Log-up</button>
+                </span>
+              </div>
+            </form>
+          </div>
         </div>
       </nav>
+      <div class="reservation">
+        Réserver une Aventures
+      </div>
+
       <!-- Gallery -->
       <section class="gallery">
         <img class="gallery__img" src="img/kayak.jpg" alt="kayak" />
@@ -45,9 +80,6 @@
           </p>
         </div>
       </section>
-      <div class="reservation">
-        Réserver une Aventures
-      </div>
     </header>
     <main class="paddAllPage">
       <section class="gall__video__cont paddAllPage">
