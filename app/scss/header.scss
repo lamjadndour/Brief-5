@@ -1,0 +1,48 @@
+header {
+  position: relative;
+  background-color: $darkBleu;
+
+  @media #{$mq-900-up} {
+    content: "";
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  .nav__logo {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 70px;
+    height: 84px;
+    background-image: url("../../img/Summer.svg");
+    background-size: cover;
+  }
+  a,
+  button {
+    font-family: $secondaryFont;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $white;
+  }
+  a {
+    margin-right: 30px;
+  }
+  button {
+    background-color: $green;
+    border: 0;
+    border-radius: 2px;
+    padding: 4px 17px;
+    box-shadow: 3px 3px 7px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 700ms ease-in-out;
+    &:hover {
+      background-color: darken($green, 10%);
+    }
+    @media #{$mq-900-up} {
+      padding: 8px 30px;
+    }
+  }
+}

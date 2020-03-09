@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+body {
+  margin: 0;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: $primaryFont;
+  font-weight: 700;
+  color: $white;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+// Helppers
+
+$mq-900-up: "screen and (min-width: 900px)";
+.paddAllPage {
+  padding: 25px;
+  @media #{$mq-900-up} {
+    padding: 52px 30px;
+  }
+}
