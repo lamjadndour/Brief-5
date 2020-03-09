@@ -15,7 +15,6 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"
       rel="stylesheet"
     />
-    <script src="app/js/script.js"></script>
     <header class="paddAllPage">
       <!-- Header -->
 
@@ -31,11 +30,11 @@
           <div id="id01" class="modal">
             <form class="modal-content animate">
               <div class="container">
-                <input type="text" placeholder="your name" required />
-                <input type="text" placeholder="email" required />
+                <input id="fullName" type="text" placeholder="your name" required />
+                <input id="email" type="text" placeholder="email" required />
                 <input type="text" placeholder="Username" required />
-                <input type="password" placeholder=" Password" required />
-                <input
+                <input id="password" type="password" placeholder=" Password" required />
+                <input id="passwordConf"
                   type="password"
                   placeholder="Confirm Password"
                   required
@@ -49,7 +48,7 @@
                   >
                     Cancel
                   </button>
-                  <button type="submit">Log-up</button>
+                  <button onclick="getData()"  type="submit">Log-up</button>
                 </span>
               </div>
             </form>
@@ -84,7 +83,20 @@
             <input type="time"  class="check-in__size">
           </div>
           
-          <div class="button__reserver">resever</div>
+          <button onclick="document.getElementById('id01').style.display='block'"
+           class="button__reserver">resever</button>
+        </div>
+        <div class="prod__gall__info" >
+          <img src="img/Quad.jpg" alt="" />
+          <div class="desc">
+            <h2> kayak 2D</h2>
+            <p>Irumpssum gunum fsejez jdizbdùns</p>
+          </div>
+          <div class="check-in">
+            <input type="date"  class="check-in__size">
+            <input type="time"  class="check-in__size">
+          </div>
+          <button onclick="document.getElementById('id01').style.display='block'" class="button__reserver">resever</button>
         </div>
         <div class="prod__gall__info" >
           <img src="img/Quad.jpg" alt="" />
@@ -97,20 +109,7 @@
             <input type="time"  class="check-in__size">
           </div>
           
-          <div class="button__reserver">resever</div>
-        </div>
-        <div class="prod__gall__info" >
-          <img src="img/Quad.jpg" alt="" />
-          <div class="desc">
-            <h2> kayak 2D</h2>
-            <p>Irumpssum gunum fsejez jdizbdùns</p>
-          </div>
-          <div class="check-in">
-            <input type="date"  class="check-in__size">
-            <input type="time"  class="check-in__size">
-          </div>
-          
-          <div class="button__reserver">resever</div>
+          <button class="button__reserver">resever</button>
         </div>
 
         <div class="prod__gall__info" id="midle">
@@ -124,7 +123,19 @@
             <input type="time"  class="check-in__size">
           </div>
           
-          <div class="button__reserver">resever</div>
+          <button class="button__reserver">resever</button>
+        </div>
+        <div class="prod__gall__info" >
+          <img src="img/Quad.jpg" alt="" />
+          <div class="desc">
+            <h2> kayak 2D</h2>
+            <p>Irumpssum gunum fsejez jdizbdùns</p>
+          </div>
+          <div class="check-in">
+            <input type="date"  class="check-in__size">
+            <input type="time"  class="check-in__size">
+          </div>
+          <button class="button__reserver">resever</button>
         </div>
         <div class="prod__gall__info" >
           <img src="img/Quad.jpg" alt="" />
@@ -137,20 +148,7 @@
             <input type="time"  class="check-in__size">
           </div>
           
-          <div class="button__reserver">resever</div>
-        </div>
-        <div class="prod__gall__info" >
-          <img src="img/Quad.jpg" alt="" />
-          <div class="desc">
-            <h2> kayak 2D</h2>
-            <p>Irumpssum gunum fsejez jdizbdùns</p>
-          </div>
-          <div class="check-in">
-            <input type="date"  class="check-in__size">
-            <input type="time"  class="check-in__size">
-          </div>
-          
-          <div class="button__reserver">resever</div>
+          <button class="button__reserver">resever</button>
         </div>
 
         <div class="prod__gall__info" id="last">
@@ -164,7 +162,19 @@
             <input type="time"  class="check-in__size">
           </div>
           
-          <div class="button__reserver">resever</div>
+          <button class="button__reserver">resever</button>
+        </div>
+        <div class="prod__gall__info" >
+          <img src="img/Quad.jpg" alt="" />
+          <div class="desc">
+            <h2> kayak 2D</h2>
+            <p>Irumpssum gunum fsejez jdizbdùns</p>
+          </div>
+          <div class="check-in">
+            <input type="date"  class="check-in__size">
+            <input type="time"  class="check-in__size">
+          </div>
+          <button class="button__reserver">resever</button>
         </div>
         <div class="prod__gall__info" >
           <img src="img/Quad.jpg" alt="" />
@@ -177,23 +187,63 @@
             <input type="time"  class="check-in__size">
           </div>
           
-          <div class="button__reserver">resever</div>
-        </div>
-        <div class="prod__gall__info" >
-          <img src="img/Quad.jpg" alt="" />
-          <div class="desc">
-            <h2> kayak 2D</h2>
-            <p>Irumpssum gunum fsejez jdizbdùns</p>
-          </div>
-          <div class="check-in">
-            <input type="date"  class="check-in__size">
-            <input type="time"  class="check-in__size">
-          </div>
-          
-          <div class="button__reserver">resever</div>
+          <button class="button__reserver">resever</button>
         </div>
        
       </div>
     </section>
+    <footer>
+      <div class="block">
+        <div class="block1">
+          <img src="image/logotnow1.png" alt="logo" />
+          <p>Suivez-nous sur les réseaux sociaux</p>
+          <a><img id="facebook" src="IMAGE/facebook.png" alt="facebook"/></a>
+          <a><img src="IMAGE/twitter.png" alt="twitter"/></a>
+          <a><img src="IMAGE/linkedin-in.png" alt="linkedin"/></a>
+        </div>
+        <div class="block1">
+          <strong>QUICK LINKS</strong>
+          <p>HOME</p>
+          <p>ABOUT US</p>
+          <p>CITY GUIDE</p>
+          <p>BLOG</p>
+          <p>FAQ's</p>
+        </div>
+        <div class="block1">
+          <strong>CONTACT US</strong>
+          <p>
+            Feel to get in touch with us via phone or send<br />
+            us a message
+          </p>
+          <div class="contact">
+            <p>+1 800 123 1234</p>
+            <p><strong>email@website.com</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="copy">
+        <div class="p">
+          <p>@Copyright 2019. All Right Reserved</p>
+          <div class="p2">
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer2">
+        <img id="logo" src="image/logotnow1.png" alt="logo" /><br />
+        <p>CONTACT US</p>
+        <strong>+1 800 123 1234</strong><br />
+        <strong>email@website.com</strong>
+        <p>Suivez-nous sur les réseaux sociaux</p>
+        <a><img id="facebook" src="IMAGE/facebook.png" alt="facebook"/></a>
+        <a><img src="IMAGE/twitter.png" alt="twitter"/></a>
+        <a><img src="IMAGE/linkedin-in.png" alt="linkedin"/></a>
+        <p>@Copyright 2019</p>
+        <p>All Right Reserved</p>
+      </div>
+    </footer>
+    <script src="app/js/data.js"></script>
   </body>
 </html>

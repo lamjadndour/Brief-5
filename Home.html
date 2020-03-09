@@ -16,7 +16,6 @@
   </head>
 
   <body>
-    <script src="app/js/script.js"></script>
     <header class="paddAllPage">
       <!-- Header -->
 
@@ -29,7 +28,6 @@
           <a href="#">Sign in</a>
           <button
             onclick="document.getElementById('id01').style.display='block'"
-            style="width:auto;"
           >
             Sign up
           </button>
@@ -67,7 +65,27 @@
 
       <!-- Gallery -->
       <section class="gallery">
-        <img class="gallery__img" src="img/kayak.jpg" alt="kayak" />
+        <div class="containes">
+          <div class="slide">
+            <img class="gallery__img" src="img/kayak.jpg" alt="kayak" />
+          </div>
+          <div class="slide">
+            <img class="gallery__img" src="img/Quad.jpg" alt="kayak" />
+          </div>
+          <div class="slide">
+            <img class="gallery__img" src="img/surf.jpg" alt="kayak" />
+          </div>
+          <div class="slide">
+            <img
+              class="gallery__img"
+              src="img/Tapis-flottant.jpg"
+              alt="kayak"
+            />
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
         <div class="gallery__off">
           <h2>Qu’est-ce que le kayak sport?</h2>
           <p>
@@ -120,12 +138,59 @@
           </div>
         </div>
       </section>
-      <section class="gall__celebrety">
-        <div class="celebrety">
-          <img src="" alt="" />
-          <h1 id="celebrety__name">Messi was here</h1>
-        </div>
-      </section>
     </main>
+    <footer>
+      <div class="block">
+        <div class="block1">
+          <img src="image/logotnow1.png" alt="logo" />
+          <p>Suivez-nous sur les réseaux sociaux</p>
+          <a><img id="facebook" src="IMAGE/facebook.png" alt="facebook"/></a>
+          <a><img src="IMAGE/twitter.png" alt="twitter"/></a>
+          <a><img src="IMAGE/linkedin-in.png" alt="linkedin"/></a>
+        </div>
+        <div class="block1">
+          <strong>QUICK LINKS</strong>
+          <p>HOME</p>
+          <p>ABOUT US</p>
+          <p>CITY GUIDE</p>
+          <p>BLOG</p>
+          <p>FAQ's</p>
+        </div>
+        <div class="block1">
+          <strong>CONTACT US</strong>
+          <p>
+            Feel to get in touch with us via phone or send<br />
+            us a message
+          </p>
+          <div class="contact">
+            <p>+1 800 123 1234</p>
+            <p><strong>email@website.com</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="copy">
+        <div class="p">
+          <p>@Copyright 2019. All Right Reserved</p>
+          <div class="p2">
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer2">
+        <img id="logo" src="image/logotnow1.png" alt="logo" /><br />
+        <p>CONTACT US</p>
+        <strong>+1 800 123 1234</strong><br />
+        <strong>email@website.com</strong>
+        <p>Suivez-nous sur les réseaux sociaux</p>
+        <a><img id="facebook" src="IMAGE/facebook.png" alt="facebook"/></a>
+        <a><img src="IMAGE/twitter.png" alt="twitter"/></a>
+        <a><img src="IMAGE/linkedin-in.png" alt="linkedin"/></a>
+        <p>@Copyright 2019</p>
+        <p>All Right Reserved</p>
+      </div>
+    </footer>
+    <script src="app/js/script.js"></script>
   </body>
 </html>
