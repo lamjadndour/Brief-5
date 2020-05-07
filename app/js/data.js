@@ -18,7 +18,7 @@ function ft_signup() {
 
   // validation Name
   var text;
-  if (!name.match(/^[A-Za-z]/)) {
+  if (!name.match(/^[A-Z]/)) {
     text = "champ de nom n'pas valide";
     error_message.innerHTML = text;
     return false;
@@ -64,7 +64,7 @@ function ft_reserver() {
 
   // ---------validation Name
   var text;
-  if (!fullname.match(/^[A-Za-z]/)) {
+  if (!fullname.match(/^[A-Z]/)) {
     text = "champ de nom n'pas valide";
     error_message2.innerHTML = text;
     return false;
@@ -109,7 +109,7 @@ function ft_reserver() {
   }
 
   else {
-    alert("reservation Successfully!");
+    alert("hello " + fullname + " votre reservation demarer le " + date1 + " et termine le " + date2 + " vous recever voter ticket a :" + emailR);
     return true;
   }
 }
