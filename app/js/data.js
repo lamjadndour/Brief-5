@@ -69,15 +69,25 @@ function ft_reserver() {
     error_message2.innerHTML = text;
     return false;
   }
-  // ----validation Date de naissance
-  if (!date.match(/^[0-9]{2}\-[0-9]{2}\-[0-9]{4}$/)) {
-    text = "champ de date de naissance n'pas valide";
+
+  // ---------validation Email
+  if (!emailR.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+    text = "champ de email n'pas valide";
     error_message2.innerHTML = text;
     return false;
   }
-  // ----validation cih
+
+  // ----validation C.I.N
   if (!cin.match(/^[A-Z]{2}[0-9]{5}$/)) {
     text = "champ de CIN n'pas valide";
+    error_message2.innerHTML = text;
+    return false;
+  }
+
+
+  // ----validation Date de naissance
+  if (!date.match(/^[0-9]{2}\-[0-9]{2}\-[0-9]{4}$/)) {
+    text = "champ de date de naissance n'pas valide";
     error_message2.innerHTML = text;
     return false;
   }
@@ -100,14 +110,6 @@ function ft_reserver() {
     error_message2.innerHTML = text;
     return false;
   }
-
-  // ---------validation Email
-  if (!emailR.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
-    text = "champ de email n'pas valide";
-    error_message2.innerHTML = text;
-    return false;
-  }
-
   else {
     alert("hello " + fullname + " votre reservation demarer le " + date1 + " et termine le " + date2 + " vous recever voter ticket a :" + emailR);
     return true;
