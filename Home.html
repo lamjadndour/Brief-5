@@ -1,196 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="Adventure" />
-    <title>Live the Adventure</title>
-    <link rel="stylesheet" href="app\scss\styleHome.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:700"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <header class="paddAllPage">
-      <!-- Header -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="Adventure" />
+  <title>Live the Adventure</title>
+  <link rel="stylesheet" href="app\scss\styleHome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" />
+</head>
 
-      <nav>
-        <!-- logo -->
-        <a class="nav__logo" href="#"></a>
+<body>
+  <header class="paddAllPage">
+    <!-- Header -->
 
-        <!-- Links -->
-        <div class="nav_links">
-          <a href="#">Sign in</a>
-          <button
-            onclick="document.getElementById('id01').style.display='block'"
-          >
-            Sign up
-          </button>
-          <div id="id01" class="modal">
-            <form class="modal-content animate">
-              <div class="container">
-                <input type="text" placeholder="your name" required />
-                <input type="text" placeholder="email" required />
-                <input type="text" placeholder="Username" required />
-                <input type="password" placeholder=" Password" required />
-                <input
-                  type="password"
-                  placeholder="Confirm Password"
-                  required
-                />
+    <nav>
+      <!-- logo -->
+      <a class="nav__logo" href="#"></a>
 
-                <span class="choose">
-                  <button
-                    type="button"
-                    onclick="document.getElementById('id01').style.display='none'"
-                    class="cancelbtn"
-                  >
-                    Cancel
-                  </button>
-                  <button type="submit">Log-up</button>
-                </span>
-              </div>
-            </form>
-          </div>
-        </div>
-      </nav>
-      <a href="Products.html" class="reservation">
-        Réserver une Aventures
-      </a>
+      <!-- Links -->
+      <div class="nav_links">
+        <a onclick="document.getElementById('signup').style.display='block'">Sign in</a>
+        <button onclick="document.getElementById('signup').style.display='block'">
+          Sign up
+        </button>
+        <div id="signup" class="modal">
+          <div class="modal-content animate">
+            <div class="container">
+              <div id="err_msg_inscr"></div>
+              <input type="text" id="name" placeholder="your name" />
+              <input type="text" id="email" placeholder="email" />
+              <input type="password" id="pass1" placeholder=" Password" />
+              <input type="password" id="pass2" placeholder="Confirm Password" />
 
-      <!-- Gallery -->
-      <section class="gallery">
-        <div class="containes">
-          <div class="slide">
-            <img class="gallery__img" src="img/kayak.jpg" alt="kayak" />
-          </div>
-          <div class="slide">
-            <img class="gallery__img" src="img/Quad.jpg" alt="kayak" />
-          </div>
-          <div class="slide">
-            <img class="gallery__img" src="img/surf.jpg" alt="kayak" />
-          </div>
-          <div class="slide">
-            <img
-              class="gallery__img"
-              src="img/Tapis-flottant.jpg"
-              alt="kayak"
-            />
-          </div>
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
-        </div>
-
-        <div class="gallery__off">
-          <h2>Qu’est-ce que le kayak sport?</h2>
-          <p>
-            Le kayak est une variété de canoë d’un à quatre membres d’équipage
-            dont l’utilisation est principalement sportive. Le membre d’équipage
-            ou le pagayeur est assis et orienté dans la direction de l’avance,
-            contrairement aux bateaux à rames, et propulse le bateau avec une
-            double lame ou une cuillère qui n’a pas besoin de soutien sur la
-            coque.
-          </p>
-        </div>
-      </section>
-    </header>
-    <main class="paddAllPage">
-      <section class="gall__video__cont paddAllPage">
-        <h1>Apprenez à gérer un kayak gonflable</h1>
-        <h2>Trois vidéos pour vous apprendre à sport nautique kayak.</h2>
-        <div class="video__gall">
-          <div class="video--info">
-            <div class="video--info__form">
-              <img class="video--info__img" src="img/Tapis-flottant.jpg" />
-              <!-- <img class="button__play" src="img/video-play.png" alt="" /> -->
+              <span class="choose">
+                <button type="button" onclick="document.getElementById('signup').style.display='none'"
+                  class="cancelbtn">
+                  Cancel
+                </button>
+                <button onclick="ft_signup() ">Log-up</button>
+              </span>
             </div>
-            <h2>Leçon débutants 1 / <span> 3:10</span></h2>
-            <p>
-              Première vidéo utile pour apprendre et revenir avec un kayak en
-              mer.
-            </p>
-          </div>
-          <div class="video--info">
-            <div class="video--info__form">
-              <img class="video--info__img" src="img/surf.jpg" />
-            </div>
-            <h2>Leçon débutants 2 / <span> 3:25</span></h2>
-            <p>
-              Deuxième vidéo utile pour apprendre et revenir avec un kayak en
-              mer.
-            </p>
-          </div>
-          <div class="video--info">
-            <div class="video--info__form">
-              <img class="video--info__img" src="img/Quad.jpg" alt="" />
-            </div>
-
-            <h2>Kayak / <span>0:56</span></h2>
-            <p>
-              Le kayak est certainement l’une des choses les plus agréables que
-              vous puissiez faire sur l’eau.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="block">
-        <div class="block1">
-          <img src="image/logotnow1.png" alt="logo" />
-          <p>Suivez-nous sur les réseaux sociaux</p>
-          <a><img id="facebook" src="IMAGE/facebook.png" alt="facebook"/></a>
-          <a><img src="IMAGE/twitter.png" alt="twitter"/></a>
-          <a><img src="IMAGE/linkedin-in.png" alt="linkedin"/></a>
-        </div>
-        <div class="block1">
-          <strong>QUICK LINKS</strong>
-          <p>HOME</p>
-          <p>ABOUT US</p>
-          <p>CITY GUIDE</p>
-          <p>BLOG</p>
-          <p>FAQ's</p>
-        </div>
-        <div class="block1">
-          <strong>CONTACT US</strong>
-          <p>
-            Feel to get in touch with us via phone or send<br />
-            us a message
-          </p>
-          <div class="contact">
-            <p>+1 800 123 1234</p>
-            <p><strong>email@website.com</strong></p>
           </div>
         </div>
       </div>
+    </nav>
 
-      <div class="copy">
-        <div class="p">
-          <p>@Copyright 2019. All Right Reserved</p>
-          <div class="p2">
-            <p>Privacy Policy</p>
-            <p>Terms & Conditions</p>
+    <!-- right fix button -->
+    <a href="Products.html" class="reservation">
+      Réserver une Aventures
+    </a>
+
+    <!-- Gallery -->
+    <section class="gallery">
+      <div class="containes">
+        <div class="slide">
+          <img class="gallery__img" src="img/kayak.jpg" alt="kayak" />
+        </div>
+        <div class="slide">
+          <img class="gallery__img" src="img/Quad.jpg" alt="kayak" />
+        </div>
+        <div class="slide">
+          <img class="gallery__img" src="img/surf.jpg" alt="kayak" />
+        </div>
+        <div class="slide">
+          <img class="gallery__img" src="img/Tapis-flottant.jpg" alt="kayak" />
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+
+      <div class="gallery__off">
+        <h2>Qu’est-ce que le kayak sport?</h2>
+        <p>
+          Le kayak est une variété de canoë d’un à quatre membres d’équipage
+          dont l’utilisation est principalement sportive. Le membre d’équipage
+          ou le pagayeur est assis et orienté dans la direction de l’avance,
+          contrairement aux bateaux à rames, et propulse le bateau avec une
+          double lame ou une cuillère qui n’a pas besoin de soutien sur la
+          coque.
+        </p>
+      </div>
+    </section>
+  </header>
+  <main class="paddAllPage">
+    <section class="gall__video__cont paddAllPage">
+      <h1>Apprenez à gérer un kayak gonflable</h1>
+      <h2>Trois vidéos pour vous apprendre à sport nautique kayak.</h2>
+      <div class="video__gall">
+        <div class="video--info">
+          <div class="video--info__form">
+            <img class="video--info__img" src="img/Tapis-flottant.jpg" />
+            <!-- <img class="button__play" src="img/video-play.png" alt="" /> -->
           </div>
+          <h2>Leçon débutants 1 / <span> 3:10</span></h2>
+          <p>
+            Première vidéo utile pour apprendre et revenir avec un kayak en
+            mer.
+          </p>
+        </div>
+        <div class="video--info">
+          <div class="video--info__form">
+            <img class="video--info__img" src="img/surf.jpg" />
+          </div>
+          <h2>Leçon débutants 2 / <span> 3:25</span></h2>
+          <p>
+            Deuxième vidéo utile pour apprendre et revenir avec un kayak en
+            mer.
+          </p>
+        </div>
+        <div class="video--info">
+          <div class="video--info__form">
+            <img class="video--info__img" src="img/Quad.jpg" alt="" />
+          </div>
+
+          <h2>Leçon débutants 3 / <span>0:56</span></h2>
+          <p>
+            Le kayak est certainement l’une des choses les plus agréables que
+            vous puissiez faire sur l’eau.
+          </p>
         </div>
       </div>
-      <div class="footer2">
-        <img id="logo" src="image/logotnow1.png" alt="logo" /><br />
-        <p>CONTACT US</p>
-        <strong>+1 800 123 1234</strong><br />
-        <strong>email@website.com</strong>
+    </section>
+  </main>
+  <footer>
+    <div class="block">
+      <div class="block1">
+        <img src="image/logotnow1.png" alt="logo" />
         <p>Suivez-nous sur les réseaux sociaux</p>
-        <a><img id="facebook" src="IMAGE/facebook.png" alt="facebook"/></a>
-        <a><img src="IMAGE/twitter.png" alt="twitter"/></a>
-        <a><img src="IMAGE/linkedin-in.png" alt="linkedin"/></a>
-        <p>@Copyright 2019</p>
-        <p>All Right Reserved</p>
+        <a><img id="facebook" src="IMAGE/facebook.png" alt="facebook" /></a>
+        <a><img src="IMAGE/twitter.png" alt="twitter" /></a>
+        <a><img src="IMAGE/linkedin-in.png" alt="linkedin" /></a>
       </div>
-    </footer>
-    <script src="app/js/script.js"></script>
-  </body>
+      <div class="block1">
+        <strong>QUICK LINKS</strong>
+        <p>HOME</p>
+        <p>ABOUT US</p>
+        <p>CITY GUIDE</p>
+        <p>BLOG</p>
+        <p>FAQ's</p>
+      </div>
+      <div class="block1">
+        <strong>CONTACT US</strong>
+        <p>
+          Feel to get in touch with us via phone or send<br />
+          us a message
+        </p>
+        <div class="contact">
+          <p>+1 800 123 1234</p>
+          <p><strong>email@website.com</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="copy">
+      <div class="p">
+        <p>@Copyright 2019. All Right Reserved</p>
+        <div class="p2">
+          <p>Privacy Policy</p>
+          <p>Terms & Conditions</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer2">
+      <img id="logo" src="image/logotnow1.png" alt="logo" /><br />
+      <p>CONTACT US</p>
+      <strong>+1 800 123 1234</strong><br />
+      <strong>email@website.com</strong>
+      <p>Suivez-nous sur les réseaux sociaux</p>
+      <a><img id="facebook" src="IMAGE/facebook.png" alt="facebook" /></a>
+      <a><img src="IMAGE/twitter.png" alt="twitter" /></a>
+      <a><img src="IMAGE/linkedin-in.png" alt="linkedin" /></a>
+      <p>@Copyright 2019</p>
+      <p>All Right Reserved</p>
+    </div>
+  </footer>
+  <script src="app/js/script.js"></script>
+  <script src="app/js/data.js"></script>
+
+</body>
+
 </html>

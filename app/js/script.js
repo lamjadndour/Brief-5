@@ -1,5 +1,5 @@
-// gallery Slides
-
+///////////// GALLERY  ////////////////
+///////////////////////////////////////
 var slideIndex = 1;
 showSlides(slideIndex);
 function plusSlides(n) {
@@ -27,3 +27,4 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   console.log(slides[slideIndex - 1]);
 }
+

@@ -1,114 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="Adventure" />
-    <title>Take your Chance and Do it</title>
-    <link rel="stylesheet" href="app\scss\styleProducts.css" />
-  </head>
-  <body>
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:700"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"
-      rel="stylesheet"
-    />
-    <header class="paddAllPage">
-      <!-- Header -->
 
-      <nav>
-        <!-- logo -->
-        <a class="nav__logo" href="#"></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="Adventure" />
+  <title>Take your Chance and Do it</title>
+  <link rel="stylesheet" href="app\scss\styleProducts.css" />
+</head>
 
-        <!-- Links -->
-        <div class="nav_links">
-          <a href="#">Sign in</a>
-          <button onclick="document.getElementById('id01').style.display='block'"
-          style="width:auto;">Sign up</button>
-          <div id="id01" class="modal">
-            <form class="modal-content animate">
-              <div class="container">
-                <input id="fullName" type="text" placeholder="your name" required />
-                <input id="email" type="text" placeholder="email" required />
-                <input type="text" placeholder="Username" required />
-                <input id="password" type="password" placeholder=" Password" required />
-                <input id="passwordConf"
-                  type="password"
-                  placeholder="Confirm Password"
-                  required
-                />
+<body>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" />
+  <header class="paddAllPage">
+    <!-- Header -->
 
-                <span class="choose">
-                  <button
-                    type="button"
-                    onclick="document.getElementById('id01').style.display='none'"
-                    class="cancelbtn"
-                  >
-                    Cancel
-                  </button>
-                  <button onclick="getData()"  type="submit">Log-up</button>
-                </span>
-              </div>
-            </form>
+    <nav>
+      <!-- logo -->
+      <a class="nav__logo" href="#"></a>
+
+      <!-- Links -->
+      <div class="nav_links">
+        <a onclick="document.getElementById('signup').style.display='block'">Sign in</a>
+        <button onclick="document.getElementById('signup').style.display='block'">
+          Sign up
+        </button>
+        <div id="signup" class="modal">
+          <div class="modal-content animate">
+            <div class="container">
+              <div id="err_msg_inscr"></div>
+              <input type="text" id="name" placeholder="your name" />
+              <input type="text" id="email" placeholder="email" />
+              <input type="password" id="pass1" placeholder=" Password" />
+              <input type="password" id="pass2" placeholder="Confirm Password" />
+
+              <span class="choose">
+                <button type="button" onclick="document.getElementById('signup').style.display='none'"
+                  class="cancelbtn">
+                  Cancel
+                </button>
+                <button onclick="ft_signup() ">Log-up</button>
+              </span>
+            </div>
           </div>
         </div>
-      </nav>
-      <!-- Gallery -->
-      <section class="gallProd">
-        <img class="gallProd__img" src="img/kayak.jpg" alt="kayak" />
-        <div class="switchButton"></div>
-      </section>
-    </header>
+      </div>
+    </nav>
 
-    <section class="prod">
-      <h2 class="prod__title">
-        Choose Your Side and Lives The Adventure
+    <!-- Reservation -->
+    <div id="id01" class="modal">
+      <div class="modal-content animate">
+        <div class="container">
+          <div id="error_message2"></div>
+          <input id="fullName" type="text" placeholder="your name" />
+          <input id="email2" type="text" placeholder="email" />
+          <input id="cin" type="text" placeholder="C.I.N " />
+          <input id="datenaissance" type="text" placeholder="Date de naissance" />
+          <input id="phone" type="text" placeholder="Phone" />
+          <input type="text" placeholder="Date depart" id="date1" />
+          <input type="text" placeholder="Date d'arrivée" id="date2" />
+          <label style="font-size: 26px; color: blue;"> Adults</label>
+          <input type="number" value="1" name="Adults" min="1" max="10" />
+
+          <span class="choose">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
+              Cancel
+            </button>
+            <button onclick="ft_reserver()">Reserver</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <section class="gallProd">
+      <img class="gallProd__img" src="img/kayak.jpg" alt="kayak" />
+      <div class="switchButton"></div>
+    </section>
+  </header>
+
+  <section class="prod">
+    <h2 class="prod__title">
+      Choose Your Side and Lives The Adventure
       </h1>
       <div class="prod__category">
-        <a href="#start" > Quad</a>
+        <a href="#start"> Quad</a>
         <a href="#midle"> Kayak</a>
-        <a href="#last" > Surf</a>
+        <a href="#last"> Surf</a>
       </div>
       <div class="prod__gall">
         <div class="prod__gall__info" id="start">
           <img src="img/Quad.jpg" alt="" />
           <div class="desc">
-            <h2> kayak 2D</h2>
+            <h2> Quad </h2>
             <p>Irumpssum gunum fsejez jdizbdùns</p>
           </div>
           <div class="check-in">
-            <input type="date"  class="check-in__size">
-            <input type="time"  class="check-in__size">
+            <input type="date" class="check-in__size">
+            <input type="time" class="check-in__size">
           </div>
-          
+
           <button onclick="document.getElementById('id01').style.display='block'"
-           class="button__reserver">resever</button>
+            class="button__reserver">resever</button>
         </div>
-        <div class="prod__gall__info" >
+        <div class="prod__gall__info">
           <img src="img/Quad.jpg" alt="" />
           <div class="desc">
-            <h2> kayak 2D</h2>
+            <h2> Quad</h2>
             <p>Irumpssum gunum fsejez jdizbdùns</p>
           </div>
           <div class="check-in">
-            <input type="date"  class="check-in__size">
-            <input type="time"  class="check-in__size">
+            <input type="date" class="check-in__size">
+            <input type="time" class="check-in__size">
           </div>
-          <button onclick="document.getElementById('id01').style.display='block'" class="button__reserver">resever</button>
+          <button onclick="document.getElementById('id01').style.display='block'"
+            class="button__reserver">resever</button>
         </div>
-        <div class="prod__gall__info" >
+        <div class="prod__gall__info">
           <img src="img/Quad.jpg" alt="" />
           <div class="desc">
-            <h2> kayak 2D</h2>
+            <h2> Quad</h2>
             <p>Irumpssum gunum fsejez jdizbdùns</p>
           </div>
           <div class="check-in">
-            <input type="date"  class="check-in__size">
-            <input type="time"  class="check-in__size">
+            <input type="date" class="check-in__size">
+            <input type="time" class="check-in__size">
           </div>
-          
+
           <button class="button__reserver">resever</button>
         </div>
 
@@ -119,131 +136,134 @@
             <p>Irumpssum gunum fsejez jdizbdùns</p>
           </div>
           <div class="check-in">
-            <input type="date"  class="check-in__size">
-            <input type="time"  class="check-in__size">
+            <input type="date" class="check-in__size">
+            <input type="time" class="check-in__size">
           </div>
-          
+
           <button class="button__reserver">resever</button>
         </div>
-        <div class="prod__gall__info" >
+        <div class="prod__gall__info">
           <img src="img/Quad.jpg" alt="" />
           <div class="desc">
             <h2> kayak 2D</h2>
             <p>Irumpssum gunum fsejez jdizbdùns</p>
           </div>
           <div class="check-in">
-            <input type="date"  class="check-in__size">
-            <input type="time"  class="check-in__size">
+            <input type="date" class="check-in__size">
+            <input type="time" class="check-in__size">
           </div>
           <button class="button__reserver">resever</button>
         </div>
-        <div class="prod__gall__info" >
+        <div class="prod__gall__info">
           <img src="img/Quad.jpg" alt="" />
           <div class="desc">
             <h2> kayak 2D</h2>
             <p>Irumpssum gunum fsejez jdizbdùns</p>
           </div>
           <div class="check-in">
-            <input type="date"  class="check-in__size">
-            <input type="time"  class="check-in__size">
+            <input type="date" class="check-in__size">
+            <input type="time" class="check-in__size">
           </div>
-          
+
           <button class="button__reserver">resever</button>
         </div>
 
         <div class="prod__gall__info" id="last">
           <img src="img/Quad.jpg" alt="" />
           <div class="desc">
-            <h2> kayak 2D</h2>
+            <h2> Surf</h2>
             <p>Irumpssum gunum fsejez jdizbdùns</p>
           </div>
           <div class="check-in">
-            <input type="date"  class="check-in__size">
-            <input type="time"  class="check-in__size">
+            <input type="date" class="check-in__size">
+            <input type="time" class="check-in__size">
           </div>
-          
-          <button class="button__reserver">resever</button>
-        </div>
-        <div class="prod__gall__info" >
-          <img src="img/Quad.jpg" alt="" />
-          <div class="desc">
-            <h2> kayak 2D</h2>
-            <p>Irumpssum gunum fsejez jdizbdùns</p>
-          </div>
-          <div class="check-in">
-            <input type="date"  class="check-in__size">
-            <input type="time"  class="check-in__size">
-          </div>
-          <button class="button__reserver">resever</button>
-        </div>
-        <div class="prod__gall__info" >
-          <img src="img/Quad.jpg" alt="" />
-          <div class="desc">
-            <h2> kayak 2D</h2>
-            <p>Irumpssum gunum fsejez jdizbdùns</p>
-          </div>
-          <div class="check-in">
-            <input type="date"  class="check-in__size">
-            <input type="time"  class="check-in__size">
-          </div>
-          
-          <button class="button__reserver">resever</button>
-        </div>
-       
-      </div>
-    </section>
-    <footer>
-      <div class="block">
-        <div class="block1">
-          <img src="image/logotnow1.png" alt="logo" />
-          <p>Suivez-nous sur les réseaux sociaux</p>
-          <a><img id="facebook" src="IMAGE/facebook.png" alt="facebook"/></a>
-          <a><img src="IMAGE/twitter.png" alt="twitter"/></a>
-          <a><img src="IMAGE/linkedin-in.png" alt="linkedin"/></a>
-        </div>
-        <div class="block1">
-          <strong>QUICK LINKS</strong>
-          <p>HOME</p>
-          <p>ABOUT US</p>
-          <p>CITY GUIDE</p>
-          <p>BLOG</p>
-          <p>FAQ's</p>
-        </div>
-        <div class="block1">
-          <strong>CONTACT US</strong>
-          <p>
-            Feel to get in touch with us via phone or send<br />
-            us a message
-          </p>
-          <div class="contact">
-            <p>+1 800 123 1234</p>
-            <p><strong>email@website.com</strong></p>
-          </div>
-        </div>
-      </div>
 
-      <div class="copy">
-        <div class="p">
-          <p>@Copyright 2019. All Right Reserved</p>
-          <div class="p2">
-            <p>Privacy Policy</p>
-            <p>Terms & Conditions</p>
+          <button class="button__reserver">resever</button>
+        </div>
+        <div class="prod__gall__info">
+          <img src="img/Quad.jpg" alt="" />
+          <div class="desc">
+            <h2> Surf</h2>
+            <p>Irumpssum gunum fsejez jdizbdùns</p>
           </div>
+          <div class="check-in">
+            <input type="date" class="check-in__size">
+            <input type="time" class="check-in__size">
+          </div>
+          <button class="button__reserver">resever</button>
+        </div>
+        <div class="prod__gall__info">
+          <img src="img/Quad.jpg" alt="" />
+          <div class="desc">
+            <h2> Surf</h2>
+            <p>Irumpssum gunum fsejez jdizbdùns</p>
+          </div>
+          <div class="check-in">
+            <input type="date" class="check-in__size">
+            <input type="time" class="check-in__size">
+          </div>
+
+          <button class="button__reserver">resever</button>
+        </div>
+
+      </div>
+  </section>
+  <footer>
+    <div class="block">
+      <div class="block1">
+        <img src="image/logotnow1.png" alt="logo" />
+        <p>Suivez-nous sur les réseaux sociaux</p>
+        <a><img id="facebook" src="IMAGE/facebook.png" alt="facebook" /></a>
+        <a><img src="IMAGE/twitter.png" alt="twitter" /></a>
+        <a><img src="IMAGE/linkedin-in.png" alt="linkedin" /></a>
+      </div>
+      <div class="block1">
+        <strong>QUICK LINKS</strong>
+        <p>HOME</p>
+        <p>ABOUT US</p>
+        <p>CITY GUIDE</p>
+        <p>BLOG</p>
+        <p>FAQ's</p>
+      </div>
+      <div class="block1">
+        <strong>CONTACT US</strong>
+        <p>
+          Feel to get in touch with us via phone or send<br />
+          us a message
+        </p>
+        <div class="contact">
+          <p>+1 800 123 1234</p>
+          <p><strong>email@website.com</strong></p>
         </div>
       </div>
-      <div class="footer2">
-        <img id="logo" src="image/logotnow1.png" alt="logo" /><br />
-        <p>CONTACT US</p>
-        <strong>+1 800 123 1234</strong><br />
-        <strong>email@website.com</strong>
-        <p>Suivez-nous sur les réseaux sociaux</p>
-        <a><img id="facebook" src="IMAGE/facebook.png" alt="facebook"/></a>
-        <a><img src="IMAGE/twitter.png" alt="twitter"/></a>
-        <a><img src="IMAGE/linkedin-in.png" alt="linkedin"/></a>
-        <p>@Copyright 2019</p>
-        <p>All Right Reserved</p>
+    </div>
+
+    <div class="copy">
+      <div class="p">
+        <p>@Copyright 2019. All Right Reserved</p>
+        <div class="p2">
+          <p>Privacy Policy</p>
+          <p>Terms & Conditions</p>
+        </div>
       </div>
-    </footer>
-    <script src="app/js/data.js"></script>
-  </body>
+    </div>
+    <div class="footer2">
+      <img id="logo" src="image/logotnow1.png" alt="logo" /><br />
+      <p>CONTACT US</p>
+      <strong>+1 800 123 1234</strong><br />
+      <strong>email@website.com</strong>
+      <p>Suivez-nous sur les réseaux sociaux</p>
+      <a><img id="facebook" src="IMAGE/facebook.png" alt="facebook" /></a>
+      <a><img src="IMAGE/twitter.png" alt="twitter" /></a>
+      <a><img src="IMAGE/linkedin-in.png" alt="linkedin" /></a>
+      <p>@Copyright 2019</p>
+      <p>All Right Reserved</p>
+    </div>
+  </footer>
+
+
+  <script src="app/js/data.js"></script>
+</body>
+
 </html>
